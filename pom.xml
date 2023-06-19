@@ -23,9 +23,6 @@
         <maven-complier.version>3.8.0</maven-complier.version>
         <encoding>UTF-8</encoding>
         <parallel.tests>4</parallel.tests>
-        <tags></tags>
-        <webdriver.base.url></webdriver.base.url>
-        <product.service.endpoint></product.service.endpoint>
     </properties>
 
     <dependencies>
@@ -142,10 +139,6 @@
                         <include>**/*TestSuite.java</include>
                         <include>**/When*.java</include>
                     </includes>
-                    <systemPropertyVariables>
-                        <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
-                        <product.service.endpoint>${product.service.endpoint}</product.service.endpoint>
-                    </systemPropertyVariables>
                     <parallel>classes</parallel>
                     <threadCount>${parallel.tests}</threadCount>
                     <forkCount>${parallel.tests}</forkCount>
@@ -172,9 +165,6 @@
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
                 <artifactId>serenity-maven-plugin</artifactId>
                 <version>${serenity.version}</version>
-                <configuration>
-                    <tags>${tags}</tags>
-                </configuration>
                 <executions>
                     <execution>
                         <id>serenity-reports</id>

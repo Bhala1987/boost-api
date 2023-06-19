@@ -15,18 +15,18 @@ software project/build/dependencies management tool.
 2. Removed the gradle related files
 3. Using only Maven related files like pom.xml
 4. Written the positive & negative test cases/scenarios in the cucumber feature file using gherkin format (GWT - Given,
-   When & Then) as in /src/test/resources/features/product/product_search.feature
-5. Implemented the step definitions for each step in the feature file on the stepdef class under /src/test/java/starter
-6. Implemented the methods on the ProductAPI class for hitting the endpoint and for assertions
+   When & Then) as in /src/test/resources/features/api/*.feature
+5. Implemented the step definitions for each step in the feature file on the stepdef class under /src/test/java
+6. Implemented the methods on the *API class for hitting the endpoint and for assertions
 7. Configured the serenity.conf file under the /src/test/resources directory where I have configured different
    environment uris in case
-8. Written the ProductResponse based on the fields of the response with Getters & Setters of the Lombok plugin
+8. Written the Response based on the fields of the response with Getters & Setters of the Lombok plugin
 
 ## How to run this test project?
 
 #### Locally:
 
-1. mvn clean verify -Denvironment=demo -DrerunFailingTestsCount=2
+1. mvn clean verify -Dcucumber.filter.tags=@e2e -DrerunFailingTestsCount=2
    (OR)
    mvn clean verify
 2. Once ran successfully without any issues, we should be able to see the test report under the
